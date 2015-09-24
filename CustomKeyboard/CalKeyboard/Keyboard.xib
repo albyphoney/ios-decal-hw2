@@ -1,12 +1,18 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="8187.4" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8151.3"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="KeyboardViewController" customModule="CalKeyboard" customModuleProvider="target">
             <connections>
+                <outlet property="deleteButton" destination="jYi-sM-N7R" id="r2s-fe-Xnj"/>
+                <outlet property="goodbyeButton" destination="yLx-7u-4Ml" id="tVV-9H-f06"/>
+                <outlet property="helloButton" destination="vB6-Fv-8S5" id="WuT-Ml-BeX"/>
                 <outlet property="nextKeyboardButton" destination="gRt-12-JcF" id="CWQ-gG-G2m"/>
+                <outlet property="returnButton" destination="OIB-hi-f4y" id="HrM-W7-ZRU"/>
+                <outlet property="seeyouButton" destination="gSl-RU-L8w" id="lde-Kg-Pab"/>
+                <outlet property="welcomeButton" destination="5EG-Td-UXP" id="6bV-20-VNf"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -22,6 +28,30 @@
                     </constraints>
                     <state key="normal" title="N"/>
                 </button>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OIB-hi-f4y">
+                    <rect key="frame" x="305" y="85" width="46" height="30"/>
+                    <state key="normal" title="Return"/>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jYi-sM-N7R">
+                    <rect key="frame" x="306" y="21" width="45" height="30"/>
+                    <state key="normal" title="Delete"/>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5EG-Td-UXP">
+                    <rect key="frame" x="155" y="97" width="64" height="30"/>
+                    <state key="normal" title="Welcome"/>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gSl-RU-L8w">
+                    <rect key="frame" x="159" y="135" width="56" height="30"/>
+                    <state key="normal" title="See You"/>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yLx-7u-4Ml">
+                    <rect key="frame" x="156" y="59" width="62" height="30"/>
+                    <state key="normal" title="Goodbye"/>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vB6-Fv-8S5">
+                    <rect key="frame" x="170" y="21" width="35" height="30"/>
+                    <state key="normal" title="Hello"/>
+                </button>
             </subviews>
             <constraints>
                 <constraint firstItem="gRt-12-JcF" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="8" id="LUD-YX-JVD"/>
@@ -29,7 +59,7 @@
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <point key="canvasLocation" x="605.5" y="542"/>
+            <point key="canvasLocation" x="395.5" y="479"/>
         </view>
     </objects>
 </document>

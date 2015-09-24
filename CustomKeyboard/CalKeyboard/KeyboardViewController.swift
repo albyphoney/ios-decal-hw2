@@ -9,7 +9,12 @@
 import UIKit
 
 class KeyboardViewController: UIInputViewController {
-
+    @IBOutlet weak var returnButton: UIButton!
+    @IBOutlet weak var deleteButton: UIButton!
+    @IBOutlet weak var helloButton: UIButton!
+    @IBOutlet weak var goodbyeButton: UIButton!
+    @IBOutlet weak var welcomeButton: UIButton!
+    @IBOutlet weak var seeyouButton: UIButton!
     @IBOutlet var nextKeyboardButton: UIButton!
     
     var keyboardView: UIView!
@@ -45,7 +50,38 @@ class KeyboardViewController: UIInputViewController {
         view.addSubview(keyboardView)
         view.backgroundColor = keyboardView.backgroundColor
         nextKeyboardButton.addTarget(self, action: "advanceToNextInputMode", forControlEvents: .TouchUpInside) // advanceToNextInputMode is already defined in template
+        helloButton.addTarget(self, action:
+            "helloChar", forControlEvents: .TouchUpInside)
+        goodbyeButton.addTarget(self, action:
+            "goodbyeChar", forControlEvents: .TouchUpInside)
+        welcomeButton.addTarget(self, action:
+            "welcomeChar", forControlEvents: .TouchUpInside)
+        seeyouButton.addTarget(self, action:
+            "seeyouChar", forControlEvents: .TouchUpInside)
+        returnButton.addTarget(self, action:
+            "newline", forControlEvents: .TouchUpInside)
+        deleteButton.addTarget(self, action:
+            "backspace", forControlEvents: .TouchUpInside)
     }
-
+    func helloChar() {
+        textDocumentProxy.insertText("hello")
+    }
+    func goodbyeChar() {
+        textDocumentProxy.insertText("goodbye")
+    }
+    func seeyouChar() {
+        textDocumentProxy.insertText("seeyou")
+    }
+    func welcomeChar() {
+        textDocumentProxy.insertText("welcome")
+    }
+    
+    func newline() {
+        textDocumentProxy.insertText("\n")
+    }
+    
+    func backspace() {
+        textDocumentProxy.deleteBackward()
+    }
 
 }
